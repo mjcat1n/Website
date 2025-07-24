@@ -7,6 +7,10 @@ html {
 :root {
   font-family: Inter, sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  --bg-dark: #0c0c20;
+  --bg-darker: rgb(15, 15, 15);
+  --color-light: #fff;
+  --color-muted: #aaa;
 }
 @supports (font-variation-settings: normal) {
   :root { font-family: InterVariable, sans-serif; }
@@ -19,17 +23,16 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #0c0c20;
-  color: white;
+  background-color: var(--bg-dark);
+  color: var(--color-light);
   line-height: 1.6;
   padding: 0;
 }
 
 /* HERO HEADER LAYOUT */
 .hero-header {
-  background-color: rgb(15, 15, 15);
-  color: white;
+  background-color: var(--bg-darker);
+  color: var(--color-light);
   padding: 2rem 1rem;
   text-align: center;
   display: flex;
@@ -37,7 +40,7 @@ body {
   justify-content: space-between;
   gap: 2rem;
   height: 100vh;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--color-light);
 }
 
 /* Top nav (About Me, Contact, Pets) */
@@ -53,7 +56,7 @@ body {
 
 .top-nav a,
 .bottom-nav a {
-  color: white;
+  color: var(--color-light);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
@@ -61,6 +64,7 @@ body {
 
 .top-nav a:hover,
 .bottom-nav a:hover {
+  transform: scale(1.1);
   text-decoration: none;
 }
 
@@ -88,8 +92,8 @@ section h1 {
 #pet-pics {
   padding: 2rem 1rem;
   text-align: center;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 2px solid var(--color-light);
+  border-bottom: 2px solid var(--color-light);
 }
 
 .gallery {
@@ -154,8 +158,8 @@ footer {
   text-align: left;
   padding: 1rem;
   font-size: 0.9rem;
-  color: #aaa;
-  background-color: black;
+  color: var(--color-muted);
+  background-color: var(--bg-darker);
 }
 
 /* MEDIA QUERIES */
