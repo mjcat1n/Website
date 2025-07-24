@@ -1,0 +1,192 @@
+/* Base Reset */
+html {
+  scroll-behavior: smooth;
+  font-size: 20px;
+}
+
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #0c0c20;
+  color: white;
+  line-height: 1.6;
+  padding: 0;
+}
+
+/* HERO HEADER LAYOUT */
+.hero-header {
+  background-color: rgb(15, 15, 15);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 100vh;
+  border-bottom: 2px solid white;
+}
+
+/* Top nav (About Me, Contact, Pets) */
+.top-nav,
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Optional padding */
+}
+
+.top-nav a,
+.bottom-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.top-nav a:hover,
+.bottom-nav a:hover {
+  text-decoration: none;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+/* SECTION HEADINGS */
+section h1 {
+  text-align: center;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+/* ABOUT SECTION */
+#about-me {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* PET GALLERY */
+#pet-pics {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  background-color: #ccc;
+}
+
+/* CONTACT FORM */
+#contact {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+form button {
+  background-color: white;
+  color: #0c0c20;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: #ddd;
+}
+
+/* FOOTER */
+footer {
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  background-color: black;
+}
+
+/* MEDIA QUERIES */
+/* Tablets (≥600px) */
+@media (min-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktops (≥900px) */
+@media (min-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-title {
+    font-size: 5rem;
+  }
+
+  #about-me,
+  #contact {
+    padding: 3rem;
+  }
+
+  form {
+    gap: 1.5rem;
+  }
+
+  .top-nav,
+  .bottom-nav {
+    font-size: 1rem;
+  }
+}
