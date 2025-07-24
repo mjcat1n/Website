@@ -1,78 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <title>Matt Cantin Portfolio</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="preconnect" href="https://rsms.me/">
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <title>Matt Cantin Portfolio</title>
-</head>
+  <body>
+    <header>
+      <header class="hero-header">
+        <div class="top-nav">
+          <a href="#about-me">About Me</a>
+          <a href="#pet-pics">My Pets</a>
+          <a href="#contact">Contact</a>
+        </div>
 
-<body>
-  <header>
-<header class="hero-header">
-    <div class="top-nav">
-        <a href="#about-me">About Me</a>
-        <a href="#pet-pics">My Pets</a>
-        <a href="#contact">Contact</a>
-    </div>
+        <h1 class="hero-title">MJ</h1>
 
-    <h1 class="hero-title">MJ</h1>
+        <div class="bottom-nav">
+          <a
+            href="https://instagram.com/mjcat1n"
+            class="fa fa-instagram"
+            target="_blank"
+          >
+            Instagram</a
+          >
+          <a
+            href="https://github.com/mjcat1n"
+            class="fa fa-github"
+            target="_blank"
+          >
+            GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/matt-cantin-b61151331"
+            class="fa fa-linkedin"
+            target="_blank"
+          >
+            LinkedIn</a
+          >
+        </div>
+      </header>
+    </header>
 
-    <div class="bottom-nav">
-        <a href="https://instagram.com/mjcat1n" class="fa fa-instagram" target="_blank"> Instagram</a>
-        <a href="https://github.com/mjcat1n" class="fa fa-github" target="_blank"> GitHub</a>
-        <a href="https://www.linkedin.com/in/matt-cantin-b61151331" class="fa fa-linkedin" target="_blank"> LinkedIn</a>
-    </div>
-</header>
+    <main>
+      <section id="about-me">
+        <h1>About Me</h1>
+        <p>
+          Hi—I’m Matt, a soon-to-be Computer Science graduate from Metropolitan
+          State University of Denver. I am currently working on building my
+          portfolio in hopes to stand out in this competitive job market. I have
+          worked on various projects inconsistently over the past decade and a
+          half, but have not been consistent in my coding journey until
+          recently. Some of my projects include a Twitter image bot that posts
+          photos from Reddit made in Python, a Telegram gambling chatbot made in
+          Python, a Jeopardy browser game made in C++, and many others. I have
+          dabbled in web development, but this is my first attempt at creating
+          and maintaining a portfolio. I look forward to building up my skills
+          and showcasing my work here and on my github. If you are interested in
+          my work, or would like to hire me, please feel free to reach out using
+          the contact form below. I am always open to new opportunities and
+          collaborations. Thank you for visiting my portfolio!
+        </p>
+      </section>
 
-  </header>
+      <section id="pet-pics">
+        <h1>My Pets</h1>
+        <div class="gallery">
+          <img src="pets/zeus.jpeg" alt="zeus" />
+          <img src="pets/taz.jpeg" alt="taz" />
+          <img src="pets/tank.jpeg" alt="tank" />
+          <img src="pets/butter.jpeg" alt="butter" />
+          <img src="pets/bubba.jpeg" alt="bubba" />
+          <img src="pets/stu.jpeg" alt="stu" />
+        </div>
+      </section>
 
-  <main>
-    <section id="about-me">
-      <h1>About Me</h1>
-      <p>
-        Hi—I’m Matt, a soon-to-be Computer Science graduate from Metropolitan State University of Denver. I am currently working on building 
-        my portfolio in hopes to stand out in this competitive job market. I have worked on various projects inconsistently over the past decade
-        and a half, but have not been consistent in my coding journey until recently. Some of my projects include a Twitter image bot that posts
-        photos from Reddit made in Python, a Telegram gambling chatbot made in Python, a Jeopardy browser game made in C++, and many others. I have
-        dabbled in web development, but this is my first attempt at creating and maintaining a portfolio. I look forward to building up my skills
-        and showcasing my work here and on my github. If you are interested in my work, or would like to hire me, please feel free to reach out using
-        the contact form below. I am always open to new opportunities and collaborations. Thank you for visiting my portfolio!
-      </p>
-    </section>
+      <section id="contact">
+        <h1>Contact</h1>
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
 
-    <section id="pet-pics">
-      <h1>My Pets</h1>
-      <div class="gallery">
-        <img src="pets/zeus.jpeg" alt="zeus" />
-        <img src="pets/taz.jpeg" alt="taz" />
-        <img src="pets/tank.jpeg" alt="tank" />
-        <img src="pets/butter.jpeg" alt="butter" />
-        <img src="pets/bubba.jpeg" alt="bubba" />
-        <img src="pets/stu.jpeg" alt="stu" />
-      </div>
-    </section>
+    <footer>
+      <p>&copy 2025 Copyright and stuff down here. No rights reserved.</p>
+    </footer>
 
-    <section id="contact">
-      <h1>Contact</h1>
-      <form>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy 2025 Copyright and stuff down here. No rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

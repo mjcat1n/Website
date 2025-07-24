@@ -69,8 +69,14 @@ body {
 }
 
 .hero-title {
+  width: fit-content;
+  margin: 0 auto;
   font-size: 4rem;
-  font-weight: bold;
+  user-select: none;
+}
+
+h1.hero-title:hover {
+  animation: rotate 1s linear infinite;
 }
 
 /* SECTION HEADINGS */
@@ -108,6 +114,11 @@ section h1 {
   height: auto;
   border-radius: 0.5rem;
   background-color: #ccc;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 /* CONTACT FORM */
@@ -192,5 +203,28 @@ footer {
   .top-nav,
   .bottom-nav {
     font-size: 1rem;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1.2);
+    color: red;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.4);
+    color: blue;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.6);
+    color: yellow;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.4);
+    color: green;
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+    color: purple;
   }
 }
