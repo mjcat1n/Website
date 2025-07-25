@@ -177,6 +177,7 @@ footer {
   font-size: 0.9rem;
   color: var(--color-muted);
   background-color: var(--bg-darker);
+<<<<<<< HEAD
 }
 
 /* FOLLOWER DIV */
@@ -187,6 +188,8 @@ footer {
   pointer-events: none;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+=======
+>>>>>>> 08ff673f29f64d9e47727123fe793c8f81e15c70
 }
 
 /* MEDIA QUERIES */
