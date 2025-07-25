@@ -4,9 +4,17 @@ html {
   font-size: 20px;
 }
 
+html, body {
+  cursor: url('cursors/main_cursor.png'), auto;
+}
+
 :root {
   font-family: Inter, sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  --bg-dark: #0c0c20;
+  --bg-darker: rgb(15, 15, 15);
+  --color-light: #fff;
+  --color-muted: #aaa;
 }
 @supports (font-variation-settings: normal) {
   :root { font-family: InterVariable, sans-serif; }
@@ -19,17 +27,16 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #0c0c20;
-  color: white;
+  background-color: var(--bg-dark);
+  color: var(--color-light);
   line-height: 1.6;
   padding: 0;
 }
 
 /* HERO HEADER LAYOUT */
 .hero-header {
-  background-color: rgb(15, 15, 15);
-  color: white;
+  background-color: var(--bg-darker);
+  color: var(--color-light);
   padding: 2rem 1rem;
   text-align: center;
   display: flex;
@@ -37,7 +44,7 @@ body {
   justify-content: space-between;
   gap: 2rem;
   height: 100vh;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--color-light);
 }
 
 /* Top nav (About Me, Contact, Pets) */
@@ -53,20 +60,28 @@ body {
 
 .top-nav a,
 .bottom-nav a {
-  color: white;
+  color: var(--color-light);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
+  cursor: url('cursors/main_cursor.png'), auto;
 }
 
 .top-nav a:hover,
 .bottom-nav a:hover {
+  transform: scale(1.1);
   text-decoration: none;
 }
 
 .hero-title {
+  width: fit-content;
+  margin: 0 auto;
   font-size: 4rem;
-  font-weight: bold;
+  user-select: none;
+}
+
+h1.hero-title:hover {
+  animation: rotate 1s linear infinite;
 }
 
 /* SECTION HEADINGS */
@@ -88,8 +103,8 @@ section h1 {
 #pet-pics {
   padding: 2rem 1rem;
   text-align: center;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 2px solid var(--color-light);
+  border-bottom: 2px solid var(--color-light);
 }
 
 .gallery {
@@ -104,6 +119,11 @@ section h1 {
   height: auto;
   border-radius: 0.5rem;
   background-color: #ccc;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 /* CONTACT FORM */
@@ -127,6 +147,7 @@ form textarea {
   border: none;
   border-radius: 4px;
   font-size: 1rem;
+  cursor: url('cursors/main_cursor.png'), auto;
 }
 
 form textarea {
@@ -141,8 +162,8 @@ form button {
   padding: 0.75rem;
   font-size: 1rem;
   border-radius: 4px;
-  cursor: pointer;
   font-weight: bold;
+  cursor: url('cursors/main_cursor.png'), auto;
 }
 
 form button:hover {
@@ -154,8 +175,18 @@ footer {
   text-align: left;
   padding: 1rem;
   font-size: 0.9rem;
-  color: #aaa;
-  background-color: black;
+  color: var(--color-muted);
+  background-color: var(--bg-darker);
+}
+
+/* FOLLOWER DIV */
+#follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* MEDIA QUERIES */
@@ -188,5 +219,28 @@ footer {
   .top-nav,
   .bottom-nav {
     font-size: 1rem;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1.2);
+    color: red;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.4);
+    color: blue;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.6);
+    color: yellow;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.4);
+    color: green;
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+    color: purple;
   }
 }
